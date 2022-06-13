@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ExchangeRatesApp</string>
+    <string name="titleFavourite">Избранное</string>
+    <string name="titlePopular">Популярное</string>
 </resources>

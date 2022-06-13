@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_popular"
+        android:icon="@drawable/ic_round_monetization_on_24"
+        android:title="@string/titlePopular" />
+    <item
+        android:id="@+id/nav_favourite"
+        android:icon="@drawable/ic_round_star_24_white"
+        android:title="@string/titleFavourite" />
+
+</menu>

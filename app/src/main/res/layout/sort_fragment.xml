@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/buttonClose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCodeSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Сортировка по алфавиту"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCodeAsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="По возрастанию"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="@+id/textCodeSort"
+        app:layout_constraintTop_toBottomOf="@+id/textCodeSort" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCodeDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="По убыванию"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxCodeAsc"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxCodeAsc" />
+
+    <TextView
+        android:id="@+id/textValueSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Сортировка по значению"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxCodeDesc" />
+
+    <CheckBox
+        android:id="@+id/checkBoxValueAsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="По возрастанию"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="@+id/textValueSort"
+        app:layout_constraintTop_toBottomOf="@+id/textValueSort" />
+
+    <CheckBox
+        android:id="@+id/checkBoxValueDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="По убыванию"
+        android:layout_marginBottom="16dp"
+
+        app:layout_constraintStart_toStartOf="@+id/checkBoxValueAsc"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxValueAsc" />
+
+    <Button
+        android:id="@+id/buttonOk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Показать"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
