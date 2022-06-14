@@ -8,4 +8,4 @@
 - возможность отсортировать список по алфавиту и значениям курсов.</br>
 
 Стек:
-Kotlin, MVVM, StateFlow, Coroutines, Room, Dagger2 или Hilt
+Kotlin, MVVM, StateFlow, Coroutines, Room, Dagger2
