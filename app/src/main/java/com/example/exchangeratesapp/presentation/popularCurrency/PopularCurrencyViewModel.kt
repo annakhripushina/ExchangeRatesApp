@@ -68,7 +68,7 @@ class PopularCurrencyViewModel @Inject constructor(
 
             } catch (http: HttpException) {
                 _uiState.value = CurrencyListUiState.Error(
-                    context.getString(R.string.textException) + http.code().toString()
+                    context.getString(R.string.textHttpException) + http.code().toString()
                 )
                 currencyDbUseCase.getPopularCurrency()
                     .collect { value ->
@@ -101,8 +101,15 @@ class PopularCurrencyViewModel @Inject constructor(
                     CurrencyListUiState.SuccessSpinner(currencyApiUseCase.spinnerArray)
             } catch (http: HttpException) {
                 _uiState.value = CurrencyListUiState.Error(
-                    context.getString(R.string.textException) + http.code().toString()
+                    context.getString(R.string.textHttpException) + http.code().toString()
                 )
+                currencyDbUseCase.getPopularCurrency()
+                    .collect { value ->
+                        currencyApiUseCase.spinnerArray =
+                            value.map { it.code }.toTypedArray()
+                        _uiState.value =
+                            CurrencyListUiState.SuccessSpinner(currencyApiUseCase.spinnerArray)
+                    }
             } catch (e: Exception) {
                 _uiState.value =
                     CurrencyListUiState.Error(context.getString(R.string.textException))

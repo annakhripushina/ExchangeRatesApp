@@ -101,7 +101,7 @@ class FavouriteCurrencyViewModel @Inject constructor(
                     CurrencyListUiState.SuccessSpinner(currencyApiUseCase.spinnerArray)
             } catch (http: HttpException) {
                 _uiState.value = CurrencyListUiState.Error(
-                    context.getString(R.string.textException) + http.code().toString()
+                    context.getString(R.string.textHttpException) + http.code().toString()
                 )
             } catch (e: Exception) {
                 _uiState.value =
