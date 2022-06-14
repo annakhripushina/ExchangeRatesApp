@@ -1,10 +1,10 @@
 package com.example.exchangeratesapp.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.exchangeratesapp.R
-import com.example.exchangeratesapp.ui.favouriteRates.FavouriteRatesFragment
-import com.example.exchangeratesapp.ui.popularRates.PopularRatesFragment
+import com.example.exchangeratesapp.ui.favouriteCurrency.FavouriteCurrencyFragment
+import com.example.exchangeratesapp.ui.popularCurrency.PopularCurrencyFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, PopularRatesFragment())
+                .replace(R.id.fragmentContainerView, PopularCurrencyFragment())
                 .commit()
         }
 
@@ -24,12 +24,20 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.nav_popular -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, PopularRatesFragment(), "PopularRatesFragment")
+                        .replace(
+                            R.id.fragmentContainerView,
+                            PopularCurrencyFragment(),
+                            "PopularCurrencyFragment"
+                        )
                         .commit()
                 }
                 R.id.nav_favourite -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, FavouriteRatesFragment(), "FavouriteRatesFragment")
+                        .replace(
+                            R.id.fragmentContainerView,
+                            FavouriteCurrencyFragment(),
+                            "PopularCurrencyFragment"
+                        )
                         .commit()
                 }
             }

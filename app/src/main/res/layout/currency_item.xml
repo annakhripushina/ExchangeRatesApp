@@ -6,19 +6,19 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
-        android:id="@+id/textRateCode"
+        android:id="@+id/textCurrencyCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="CODE"
+        android:text="@string/textCode"
         android:textStyle="bold"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <TextView
-        android:id="@+id/textRateValue"
+        android:id="@+id/textCurrencyValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -27,8 +27,8 @@
         app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="16dp"
-        android:text="0.000000" />
+        android:textSize="16sp"
+        android:text="@string/textValueNull" />
 
     <ImageView
         android:id="@+id/buttonStar"

@@ -2,4 +2,8 @@
     <string name="app_name">ExchangeRatesApp</string>
     <string name="titleFavourite">Избранное</string>
     <string name="titlePopular">Популярное</string>
+    <string name="textHttpException">\"Ошибка обращения к серверу. Код: \"</string>
+    <string name="textException">Возможно, нет доступа к сети. Проверьте подключение.</string>
+    <string name="textCode">CODE</string>
+    <string name="textValueNull">0.000000</string>
 </resources>

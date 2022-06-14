@@ -1,16 +1,16 @@
-package com.example.exchangeratesapp.ui.popularRates
+package com.example.exchangeratesapp.ui.popularCurrency
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.exchangeratesapp.databinding.RateItemBinding
-import com.example.exchangeratesapp.domain.entity.PopularRate
+import com.example.exchangeratesapp.databinding.CurrencyItemBinding
+import com.example.exchangeratesapp.domain.entity.PopularCurrency
 
-class PopularRatesAdapter(private val onClick: (String) -> Unit) :
+class PopularCurrencyAdapter(private val onClick: (PopularCurrency) -> Unit) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    var ratesList: List<PopularRate> = emptyList()
+    var listAdapter: List<PopularCurrency> = emptyList()
         @SuppressLint("NotifyDataSetChanged")
         set(value) {
             field = value
@@ -18,19 +18,20 @@ class PopularRatesAdapter(private val onClick: (String) -> Unit) :
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = RateItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return PopularRatesViewHolder(binding, onClick)
+        val binding =
+            CurrencyItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return PopularCurrencyViewHolder(binding, onClick)
     }
 
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is PopularRatesViewHolder -> {
-                holder.bind(ratesList[position])
+            is PopularCurrencyViewHolder -> {
+                holder.bind(listAdapter[position])
             }
         }
     }
 
     override fun getItemCount(): Int =
-        ratesList.size
+        listAdapter.size
 }
