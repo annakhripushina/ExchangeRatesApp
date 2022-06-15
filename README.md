@@ -7,5 +7,7 @@
 - возможность добавления валюты в избранное и хранение списка в БД.</br>
 - возможность отсортировать список по алфавиту и значениям курсов.</br>
 
+API: 
+https://console.fastforex.io/</br>
 Стек:
 Kotlin, MVVM, StateFlow, Coroutines, Room, Dagger2
